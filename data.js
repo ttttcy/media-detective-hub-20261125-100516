@@ -261,71 +261,85 @@ export const assets = {
   "N4FULL": {
     "id": "N4FULL",
     "module": "N4",
-    "type": "完整版视频",
-    "title": "新的故事片段",
-    "duration": 84.58,
-    "width": 1320,
-    "height": 898,
-    "src": "./media/n6-full.mp4",
-    "poster": "./media/n6-full-frame-1.jpg",
+    "type": "网传视频",
+    "title": "网传桥梁视频",
+    "duration": 6.08,
+    "width": 1170,
+    "height": 2532,
+    "src": "./media/n4-bridge-full.mp4",
+    "poster": "./media/n4-bridge-full-frame-1.jpg",
     "status": "training",
-    "aspect": "1320:898",
+    "aspect": "1170:2532",
     "format": "MP4 · H.264 / AAC"
   },
   "N4C1": {
     "id": "N4C1",
     "module": "N4",
     "type": "观察片段",
-    "title": "房间光影",
-    "duration": 4.8,
-    "width": 1320,
-    "height": 898,
-    "src": "./media/n6-c1.mp4",
-    "poster": "./media/n6-c1-frame-1.jpg",
+    "title": "人员撤退",
+    "duration": 2.29,
+    "width": 1170,
+    "height": 2532,
+    "src": "./media/n4-bridge-c1.mp4",
+    "poster": "./media/n4-bridge-c1-frame-1.jpg",
     "status": "training",
-    "aspect": "1320:898",
+    "aspect": "1170:2532",
     "format": "MP4 · H.264 / AAC"
   },
   "N4C2": {
     "id": "N4C2",
     "module": "N4",
     "type": "观察片段",
-    "title": "身体与重力",
-    "duration": 2.33,
-    "width": 1320,
-    "height": 898,
-    "src": "./media/n6-c2.mp4",
-    "poster": "./media/n6-c2-frame-1.jpg",
+    "title": "桥面玻璃",
+    "duration": 1.99,
+    "width": 1170,
+    "height": 2532,
+    "src": "./media/n4-bridge-c2.mp4",
+    "poster": "./media/n4-bridge-c2-frame-1.jpg",
     "status": "training",
-    "aspect": "1320:898",
+    "aspect": "1170:2532",
     "format": "MP4 · H.264 / AAC"
   },
   "N4C3": {
     "id": "N4C3",
     "module": "N4",
     "type": "观察片段",
-    "title": "人物动线",
-    "duration": 5.29,
-    "width": 1320,
-    "height": 898,
-    "src": "./media/n6-c3.mp4",
-    "poster": "./media/n6-c3-frame-1.jpg",
+    "title": "人物重心",
+    "duration": 1.14,
+    "width": 1170,
+    "height": 2532,
+    "src": "./media/n4-bridge-c3.mp4",
+    "poster": "./media/n4-bridge-c3-frame-1.jpg",
     "status": "training",
-    "aspect": "1320:898",
+    "aspect": "1170:2532",
     "format": "MP4 · H.264 / AAC"
   },
   "N4C4": {
     "id": "N4C4",
     "module": "N4",
     "type": "观察片段",
-    "title": "人物面部细节",
-    "duration": 7.68,
-    "width": 1320,
-    "height": 898,
-    "src": "./media/n6-c4.mp4",
-    "poster": "./media/n6-c4-frame-1.jpg",
+    "title": "跑步动作",
+    "duration": 1.51,
+    "width": 1170,
+    "height": 2532,
+    "src": "./media/n4-bridge-c4.mp4",
+    "poster": "./media/n4-bridge-c4-frame-1.jpg",
     "status": "training",
-    "aspect": "1320:898",
+    "aspect": "1170:2532",
+    "format": "MP4 · H.264 / AAC"
+  },
+  "N4REPORT": {
+    "id": "N4REPORT",
+    "module": "N4",
+    "type": "解读报道",
+    "title": "张家界事件解读报道",
+    "duration": 97.71,
+    "width": 1320,
+    "height": 678,
+    "src": "./media/n4-bridge-report.mp4",
+    "poster": "./media/n4-bridge-report-frame-1.jpg",
+    "status": "training",
+    "aspect": "1320:678",
     "format": "MP4 · H.264 / AAC"
   }
 };
@@ -670,19 +684,19 @@ export const modules = [
   },
   {
     "id": "N4",
-    "title": "故事视频观察",
-    "short": "故事视频",
+    "title": "网传视频核验",
+    "short": "网传视频",
     "minutes": 6,
-    "description": "先看全片，再从四个细节观察。",
-    "intro": "看完完整版后留下整体判断，再依次观察四段素材。每段作答后揭示对应细节。",
+    "description": "整体判断、四处细节，再看事件解读。",
+    "intro": "观察标称“张家界大桥倒塌”的网传视频，留下判断，再核对细节与报道。",
     "questions": [
       {
         "id": "N4Q1",
-        "title": "看完整段视频，你会如何判断？",
+        "title": "这段桥梁视频，你会如何判断？",
         "asset": "N4FULL",
         "gate": true,
         "deferredFeedback": true,
-        "scenario": "请结合完整画面，判断视频的制作方式。接下来会分别观察四个片段。",
+        "scenario": "这段网传画面被描述为“张家界大桥倒塌”。请先观察视频，再判断它是真实现场拍摄，还是 AI 生成的画面。",
         "groups": [
           {
             "id": "judgment",
@@ -707,25 +721,25 @@ export const modules = [
           }
         ],
         "feedback": {
-          "region": "光影、重力、动线与面部纹理",
-          "reason": "本题按提供者给定的AI素材及四项观察线索设置答案。",
-          "trap": "机器人或故事情节本身不能单独证明使用了AI。",
-          "limitation": "整体判断需要结合连续画面与素材来源。"
+          "region": "人员撤退、玻璃破裂、身体重心与跑步动作",
+          "reason": "本训练素材的答案为 AI 视频，结合四段细节和最后的事件解读核验。",
+          "trap": "画面中的地名、平台界面与互动数量不能证明事件发生。",
+          "limitation": "视觉疑点用于引导核验，事件信息还需对照可靠来源。"
         },
-        "scoreLabel": "故事整体判断"
+        "scoreLabel": "桥梁视频整体判断"
       },
       {
         "id": "N4Q2",
-        "title": "房间光影",
+        "title": "人员撤退",
         "asset": "N4C1",
         "gate": true,
         "clipReview": true,
-        "observationFocus": "留意窗户、地面、墙面与人物身上的光影方向。",
-        "scenario": "你认为这段视频是真实拍摄，还是 AI 生成？",
+        "observationFocus": "留意桥头靠近镜头的人群，跟随同一个人观察撤离方向与位置变化。",
+        "scenario": "结合人员撤退的过程，你认为这段画面是真实拍摄，还是 AI 生成？",
         "groups": [
           {
             "id": "judgment",
-            "label": "你的判断",
+            "label": "结合人员撤退，作出判断",
             "options": [
               {
                 "id": "a",
@@ -745,40 +759,40 @@ export const modules = [
             "optional": false
           }
         ],
-        "reveal": "房间光影不符合现实",
-        "reason": "本例的观察重点是窗光与室内明暗是否对应。顺着窗户的位置检查地面亮区，再对照机器人和女孩身上的受光方向；不同区域的光影关系显得不协调。",
+        "reveal": "人员撤退的动作衔接不自然",
+        "reason": "对照桥头和台阶上的人群，观察人物是否沿着连续的路线离开。片段中部分人物的位置、轮廓与步态变化难以连贯对应，撤退过程显得不自然。",
         "points": [
-          "先定位窗户，再比较地面与墙面的亮区。",
-          "对照人物与室内物体的受光面和阴影方向。",
-          "回看片段，检查镜头变化时光影是否同步。"
+          "固定跟随一名靠近桥头的人，比较前后位置。",
+          "检查人物从桥面到台阶的移动是否有连续过程。",
+          "对照身体朝向、迈步方向和实际位移是否一致。"
         ],
-        "note": "多光源也会造成复杂光影，应比较同一场景内的整体关系。",
+        "note": "人员的反应各不相同，不能仅凭“没有立刻逃跑”判断造假。",
         "frames": [
           {
-            "src": "./media/n6-c1-frame-1.jpg",
-            "time": "00:00.5",
+            "src": "./media/n4-bridge-c1-frame-1.jpg",
+            "time": "00:00.15",
             "title": "前段画面"
           },
           {
-            "src": "./media/n6-c1-frame-2.jpg",
-            "time": "00:03.5",
+            "src": "./media/n4-bridge-c1-frame-2.jpg",
+            "time": "00:01.90",
             "title": "后续画面"
           }
         ],
-        "scoreLabel": "房间光影判断"
+        "scoreLabel": "人员撤退判断"
       },
       {
         "id": "N4Q3",
-        "title": "身体与重力",
+        "title": "桥面玻璃",
         "asset": "N4C2",
         "gate": true,
         "clipReview": true,
-        "observationFocus": "留意女孩身体的支撑点、重心与双腿的运动。",
-        "scenario": "你认为这段视频是真实拍摄，还是 AI 生成？",
+        "observationFocus": "留意桥头中央的玻璃板、接缝，以及桥面发生变化时的边缘。",
+        "scenario": "结合玻璃板的破裂与变化过程，你认为这段画面是真实拍摄，还是 AI 生成？",
         "groups": [
           {
             "id": "judgment",
-            "label": "你的判断",
+            "label": "结合桥面玻璃，作出判断",
             "options": [
               {
                 "id": "a",
@@ -798,40 +812,40 @@ export const modules = [
             "optional": false
           }
         ],
-        "reveal": "女孩身体不符合重力",
-        "reason": "观察女孩被抱起和旋转时的姿态变化。本例中，身体抬起、双腿外甩与回落的过程，和可见的支撑点、重心变化不够协调。",
+        "reveal": "桥面玻璃的变化缺少连贯细节",
+        "reason": "沿着中央玻璃板的边缘观察，原本平整的桥面逐渐翘曲、分离；板块形态和连接关系变化不连贯，破裂与下落的过程缺少清楚对应的细节。",
         "points": [
-          "先看身体由哪里支撑，重心位于何处。",
-          "比较躯干与双腿是否随旋转自然变化。",
-          "连看前后帧，检查抬起与回落是否有连续过程。"
+          "比较同一块玻璃在前后画面中的形状与位置。",
+          "跟随板块接缝，检查断裂、分离和下落的衔接。",
+          "结合连续画面观察，不把烟尘或模糊区域直接当作裂纹。"
         ],
-        "note": "快速运动和拍摄角度可能影响单帧观感，要结合整段动作。",
+        "note": "截图用于定位变化；破裂过程需要结合视频反复观察。",
         "frames": [
           {
-            "src": "./media/n6-c2-frame-1.jpg",
-            "time": "00:00.4",
+            "src": "./media/n4-bridge-c2-frame-1.jpg",
+            "time": "00:00.20",
             "title": "前段画面"
           },
           {
-            "src": "./media/n6-c2-frame-2.jpg",
-            "time": "00:01.7",
+            "src": "./media/n4-bridge-c2-frame-2.jpg",
+            "time": "00:01.65",
             "title": "后续画面"
           }
         ],
-        "scoreLabel": "身体与重力判断"
+        "scoreLabel": "桥面玻璃判断"
       },
       {
         "id": "N4Q4",
-        "title": "人物动线",
+        "title": "人物重心",
         "asset": "N4C3",
         "gate": true,
         "clipReview": true,
-        "observationFocus": "跟随人物的位置，留意搬动、离开与空房间之间的衔接。",
-        "scenario": "你认为这段视频是真实拍摄，还是 AI 生成？",
+        "observationFocus": "留意桥面变化区域的人，重点看脚下支撑、身体倾斜与重心变化。",
+        "scenario": "结合人物在桥面变化时的身体状态，你认为这段画面是真实拍摄，还是 AI 生成？",
         "groups": [
           {
             "id": "judgment",
-            "label": "你的判断",
+            "label": "结合人物重心，作出判断",
             "options": [
               {
                 "id": "a",
@@ -851,40 +865,40 @@ export const modules = [
             "optional": false
           }
         ],
-        "reveal": "人物动线没有过程",
-        "reason": "连续观察人物、被搬动物体和房间的相对位置。本例的人物离开与场景变化缺少充分的动作衔接，位置发生改变，却没有展示对应的移动过程。",
+        "reveal": "人物姿态与脚下支撑不协调",
+        "reason": "桥面明显下陷、变形时，部分人物仍保持近似站立或行走的姿态，身体调整与脚下支撑的变化不协调。观察重点是连续的受力与动作关系。",
         "points": [
-          "记住人物与物体的起始位置。",
-          "追踪人物移动、转身和离开画面的过程。",
-          "比较前后画面，找出缺少动作衔接的位置。"
+          "先定位人物双脚所处的桥面区域。",
+          "对照桥面变形时，身体重心是否随之变化。",
+          "查看是否出现缺少支撑却维持原姿态的情况。"
         ],
-        "note": "剪辑也可能省略过程；本题训练的是发现连续性疑点。",
+        "note": "并非每个人都必须摔倒；需要比较具体人物的支撑与动作。",
         "frames": [
           {
-            "src": "./media/n6-c3-frame-1.jpg",
-            "time": "00:00.5",
+            "src": "./media/n4-bridge-c3-frame-1.jpg",
+            "time": "00:00.10",
             "title": "前段画面"
           },
           {
-            "src": "./media/n6-c3-frame-2.jpg",
-            "time": "00:02.8",
+            "src": "./media/n4-bridge-c3-frame-2.jpg",
+            "time": "00:00.90",
             "title": "后续画面"
           }
         ],
-        "scoreLabel": "人物动线判断"
+        "scoreLabel": "人物重心判断"
       },
       {
         "id": "N4Q5",
-        "title": "人物面部细节",
+        "title": "跑步动作",
         "asset": "N4C4",
         "gate": true,
         "clipReview": true,
-        "observationFocus": "留意额头、眼周和嘴部纹理在表情变化时的表现。",
-        "scenario": "你认为这段视频是真实拍摄，还是 AI 生成？",
+        "observationFocus": "留意桥头向镜头移动的人，比较摆臂、跨步、脚掌落地和前进距离。",
+        "scenario": "结合人物的跑步动作，你认为这段画面是真实拍摄，还是 AI 生成？",
         "groups": [
           {
             "id": "judgment",
-            "label": "你的判断",
+            "label": "结合跑步动作，作出判断",
             "options": [
               {
                 "id": "a",
@@ -904,28 +918,29 @@ export const modules = [
             "optional": false
           }
         ],
-        "reveal": "人物面部细节过多，不符合真实情况",
-        "reason": "本例重点观察面部纹理的密度与表情变化是否匹配。对照额头、眼周和嘴部，可注意到细节显得过度强化；需要连看表情变化时，纹理是否自然跟随。",
+        "reveal": "跑步姿态与移动距离不匹配",
+        "reason": "跟随靠近桥头的人物，比较双腿迈动与身体前进。部分动作呈现滑移感，脚步、摆臂和位置变化缺少自然配合，形成了不协调的跑步过程。",
         "points": [
-          "比较额头、眼周和嘴部的纹理分布。",
-          "观察说话与微笑时，纹理是否随肌肉运动。",
-          "对照脸部与颈部、手部及背景的细节程度。"
+          "盯住同一人物，避免把不同人误作同一个人。",
+          "比较脚掌落地与身体向前移动是否同步。",
+          "连续观察手臂和双腿的节奏，检查动作衔接。"
         ],
-        "note": "皱纹多或年龄本身不是AI判据；重点是纹理与运动、光照的协调性。",
+        "note": "短片、压缩和遮挡会影响观察，最后结合事件报道核验。",
         "frames": [
           {
-            "src": "./media/n6-c4-frame-1.jpg",
-            "time": "00:00.5",
+            "src": "./media/n4-bridge-c4-frame-1.jpg",
+            "time": "00:00.10",
             "title": "前段画面"
           },
           {
-            "src": "./media/n6-c4-frame-2.jpg",
-            "time": "00:05.5",
+            "src": "./media/n4-bridge-c4-frame-2.jpg",
+            "time": "00:01.20",
             "title": "后续画面"
           }
         ],
-        "scoreLabel": "面部细节判断"
+        "scoreLabel": "跑步动作判断"
       }
-    ]
+    ],
+    "closingAsset": "N4REPORT"
   }
 ];
