@@ -49,7 +49,7 @@ export function buildReport(state) {
   const start=modules[0].questions[0].groups[0];
   const end=modules.find(m=>m.id==='N4').questions.find(q=>q.id==='N4Q1').groups[0];
   return {
-    version:'1.8.2', product:'智媒侦察局', mode:'demo', notice:'N1包含新闻视频初判、细节观察和复判；N2照片真伪按提供者标签设置；N3使用提供者标注为真实的视频；N4包含网传桥梁视频与四段观察，最后观看事件解读报道。成绩仅用于训练反馈，不构成正式能力测评。',
+    version:'1.8.3', product:'智媒侦察局', mode:'demo', notice:'N1包含新闻视频初判、细节观察和复判；N2照片真伪按提供者标签设置；N3使用提供者标注为真实的视频；N4包含网传桥梁视频与四段观察，最后观看事件解读报道。成绩仅用于训练反馈，不构成正式能力测评。',
     generatedAt:new Date(state.finishedAt??Date.now()).toISOString(),
     elapsedSeconds:Math.floor(((state.finishedAt??Date.now())-state.startedAt)/1000),
     stages,
